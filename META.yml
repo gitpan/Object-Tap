@@ -1,37 +1,16 @@
 ---
-abstract: 'a ruby-inspired tap method for your objects'
+abstract: 'Tap into a series of method calls to alter an object'
 author:
-  - 'Toby Inkster <tobyink@cpan.org>'
-build_requires:
-  ExtUtils::MakeMaker: 6.42
-  Test::More: 0.61
+  - 'Matt S Trout (mst) <mst@shadowcat.co.uk>'
+build_requires: {}
 configure_requires:
-  ExtUtils::MakeMaker: 6.42
-distribution_type: module
-generated_by: 'Module::Install version 1.02'
-keywords: []
+  ExtUtils::MakeMaker: 6.30
+  Module::Build::Tiny: 0.036
+dynamic_config: 0
+generated_by: 'Dist::Zilla version 5.019, CPAN::Meta::Converter version 2.140640'
 license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
   version: 1.4
-module_name: Object::Tap
 name: Object-Tap
-no_index:
-  directory:
-    - inc
-    - t
-    - xt
-requires:
-  Carp: 0
-  Object::AUTHORITY: 0
-  Object::DOES: 0
-  Object::Role: 0
-  Scalar::Util: 0
-  base: 0
-  perl: 5.6.0
-  strict: 0
-resources:
-  bugtracker: http://rt.cpan.org/Dist/Display.html?Queue=Object-Tap
-  homepage: https://metacpan.org/release/Object-Tap
-  license: http://dev.perl.org/licenses/
-version: 0.001
+version: 0.009001

@@ -1,16 +1,16 @@
-use Test::More tests => 6;
-BEGIN { use_ok('Object::Tap') };
+use strict;
+use warnings FATAL => 'all';
+use Test::More qw(no_plan);
+use Object::Tap;
 
-{
-	package Local::MyClass1;
-	BEGIN { Object::Tap->import }
-	use Object::DOES;
-	sub new { bless [@_] }
-}
+my $tapped;
 
-isa_ok 'Object::Tap' => 'Object::Role';
-ok(Object::Tap->DOES('Object::Role'));
-ok(Local::MyClass1->DOES('Object::Tap'));
+sub Foo::bar { $tapped = join(' ', @_) }
 
-is ${ &Object::Tap::EVAL }, 'EVAL';
-is ${ &Object::Tap::NO_EVAL }, 'NO_EVAL';
+is(Foo->$_tap(sub { $_[0]->bar($_[1]) }, 'one'), 'Foo', 'invocant returned');
+
+is($tapped, 'Foo one', 'subref tap');
+
+is(Foo->$_tap(bar => 'two'), 'Foo', 'invocant returned');
+
+is($tapped, 'Foo two', 'method name tap');
