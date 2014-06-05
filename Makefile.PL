@@ -81,7 +81,7 @@ my %WriteMakefileArgs = (
   "NAME" => "Object::Tap",
   "PREREQ_PM" => {},
   "TEST_REQUIRES" => {},
-  "VERSION" => "1.000001",
+  "VERSION" => "1.000002",
   "test" => {
     "TESTS" => "t/*.t"
   }

@@ -50,7 +50,7 @@ EOW
     use strict;
     use warnings;
 
-    require Module::Build; Module::Build->VERSION(0.3601);
+    require Module::Build; Module::Build->VERSION(0.28);
 
 
     my %module_build_args = (
@@ -64,7 +64,7 @@ EOW
         "Matt S Trout (mst) <mst\@shadowcat.co.uk>"
       ],
       "dist_name" => "Object-Tap",
-      "dist_version" => "1.000001",
+      "dist_version" => "1.000002",
       "license" => "perl",
       "module_name" => "Object::Tap",
       "recommends" => {},
