@@ -64,7 +64,7 @@ EOW
         "Matt S Trout (mst) <mst\@shadowcat.co.uk>"
       ],
       "dist_name" => "Object-Tap",
-      "dist_version" => "0.009001",
+      "dist_version" => "1.000001",
       "license" => "perl",
       "module_name" => "Object::Tap",
       "recommends" => {},
