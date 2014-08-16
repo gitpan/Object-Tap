@@ -40,9 +40,14 @@ You can also pass extra args -
 
   $obj->$_tap(sub { warn "Got arg: $_[1]" }, 'arg');
 
-or use a method name instead of a sub name -
+or use a method name instead of a sub ref -
 
   my $thing = My::Class->new(...)->$_tap(set_foo => 1);
+
+For a 'real' example of how that might be used, one could create and
+initialize an L<HTML::TableExtract> object in one go using -
+
+  my $te = HTML::TableExtract->new->$_tap(parse => $html);
 
 =head1 AUTHOR
 
